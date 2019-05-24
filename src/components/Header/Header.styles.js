@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components'
 
-import { theme, bp } from '../../lib/styled';
+import { theme, breakpoints } from '../../lib/styled';
 
-import GithubSvg from "../../../static/github.svg";
+const MLLogo = '/static/logo.png'
 
 export const Wrapper = styled.div`
   display: flex;
@@ -19,20 +19,22 @@ export const LinkWrapper = styled.a`
   align-items: center;
 `
 
-export const GitHubIcon = styled(GithubSvg)`
+export const MLIcon = styled.img.attrs({
+  src: MLLogo
+})`
   margin: 0 ${theme('spacing.double')}px;
 
-  ${bp('sm')} {
+  ${breakpoints('sm')} {
     position: absolute;
     left: 0;
   }
 `
 
 export const Title = styled.h1`
-  ${bp('xs')} {
+  ${breakpoints('xs')} {
     display: none;
   }
-  ${bp('sm')} {
+  ${breakpoints('sm')} {
     display: block;
   }
 `

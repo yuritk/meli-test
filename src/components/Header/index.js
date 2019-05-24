@@ -8,8 +8,7 @@ function Header(props) {
     <Styled.Wrapper>
       <Link href="/">
         <Styled.LinkWrapper>
-          <Styled.GitHubIcon />
-          <Styled.Title>Github Light</Styled.Title>
+          <Styled.MLIcon />
         </Styled.LinkWrapper>
       </Link>
     </Styled.Wrapper>

@@ -4,13 +4,12 @@ import { Provider } from "react-redux";
 import withRedux from "next-redux-wrapper";
 import NProgress from "nprogress";
 import Router from "next/router";
-import NextSeo from 'next-seo';
+import NextSeo from "next-seo";
 
-import SEO from '../next-seo.config';
+import SEO from "../next-seo.config";
 
 import configureStore from "../src/redux/configureStore";
 import Header from "../src/components/Header";
-import MainContent from "../src/components/MainContent";
 import ThemeProvider from "../src/theme/ThemeProvider";
 
 Router.events.on("routeChangeStart", url => NProgress.start());
@@ -32,11 +31,11 @@ class MyApp extends App {
       <Container>
         <Provider store={store}>
           <ThemeProvider>
-             <NextSeo config={SEO} />
-            <Header {...pageProps} />
-            <MainContent>
+            <Fragment>
+              <NextSeo config={SEO} />
+              <Header {...pageProps} />
               <Component {...pageProps} />
-            </MainContent>
+            </Fragment>
           </ThemeProvider>
         </Provider>
       </Container>
