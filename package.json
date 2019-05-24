@@ -1,0 +1,48 @@
+{
+  "name": "meli-test",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "now-build": "next build"
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn prettier",
+      "eslint src/ --fix",
+      "git add"
+    ]
+  },
+  "pre-commit": "lint:staged",
+  "dependencies": {
+    "@date-io/moment": "^1.1.0",
+    "@material-ui/core": "3.9.1",
+    "@material-ui/icons": "^3.0.2",
+    "axios": "0.18.0",
+    "classnames": "^2.2.6",
+    "isomorphic-unfetch": "^3.0.0",
+    "jss": "^9.8.7",
+    "lodash": "^4.17.11",
+    "moment": "^2.24.0",
+    "next": "^8.1.0",
+    "next-redux-wrapper": "^3.0.0-alpha.2",
+    "next-seo": "^1.11.2",
+    "nprogress": "^0.2.0",
+    "prop-types": "15.6.1",
+    "qs": "^6.7.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-infinite-scroller": "^1.2.2",
+    "react-jss": "^8.6.1",
+    "react-redux": "^6.0.0",
+    "redux": "4.0.0",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-logger": "3.0.6",
+    "redux-thunk": "2.2.0",
+    "styled-components": "^4.2.0"
+  },
+  "devDependencies": {
+    "babel-plugin-inline-react-svg": "^1.1.0",
+    "babel-plugin-styled-components": "^1.10.0"
+  }
+}
