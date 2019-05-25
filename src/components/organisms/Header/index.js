@@ -2,16 +2,17 @@ import React from "react";
 import Link from "next/link";
 
 import * as Styled from "./Header.styles";
+import MLIcon from "../../atoms/MLIcon";
+import SearchField from "../../molecules/SearchField";
 
 function Header(props) {
   return (
-    <Styled.Wrapper>
+    <Styled.Nav>
       <Link href="/">
-        <Styled.LinkWrapper>
-          <Styled.MLIcon />
-        </Styled.LinkWrapper>
+        <MLIcon />
       </Link>
-    </Styled.Wrapper>
+      <SearchField />
+    </Styled.Nav>
   );
 }
 

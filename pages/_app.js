@@ -9,7 +9,7 @@ import NextSeo from "next-seo";
 import SEO from "../next-seo.config";
 
 import configureStore from "../src/redux/configureStore";
-import Header from "../src/components/Header";
+import Header from "../src/components/organisms/Header";
 import ThemeProvider from "../src/theme/ThemeProvider";
 
 Router.events.on("routeChangeStart", url => NProgress.start());
