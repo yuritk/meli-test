@@ -3,36 +3,18 @@ import Head from "next/head";
 
 import Breadcrumbs from "../src/components/organisms/Breadcrumbs";
 import Content from "../src/components/atoms/Content";
-
-const mockedLinks = [
-  {
-    path: '/',
-    label: 'Eletronica, Audio y Video',
-  },
-  {
-    path: '/',
-    label: 'IPod',
-  },
-  {
-    path: '/',
-    label: 'Reproductores',
-  },
-  {
-    path: '/',
-    label: 'IPod touch',
-  },
-  {
-    label: '32 GB',
-  },
-]
+import ResultsList from "../src/components/organisms/ResultsList";
+import mockedLinks from '../src/__fixtures__/breadcrumbs.json';
+import mockedList from '../src/__fixtures__/list.json'
 
 function Page(props) {
   return (
-    <Content>
+    <Content as="main">
       <Head>
         <title>Results</title>
       </Head>
       <Breadcrumbs links={mockedLinks} />
+      <ResultsList list={mockedList} />
     </Content>
   );
 }
