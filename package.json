@@ -1,7 +1,7 @@
 {
   "name": "meli-test",
   "scripts": {
-    "dev": "next",
+    "dev": "nodemon server.js",
     "build": "next build",
     "start": "next start",
     "now-build": "next build"
@@ -28,7 +28,9 @@
     "next-images": "^1.1.1",
     "next-redux-wrapper": "^3.0.0-alpha.2",
     "next-seo": "^1.11.2",
+    "nodemon": "^1.19.1",
     "nprogress": "^0.2.0",
+    "path-match": "^1.2.4",
     "prop-types": "15.6.1",
     "qs": "^6.7.0",
     "react": "^16.8.6",
