@@ -7,9 +7,8 @@ function Page(props) {
   return (
     <Wrapper>
       <Head>
-        <title>Home</title>
+        <title>Search</title>
       </Head>
-      <p>Default Boilerplate</p>
     </Wrapper>
   );
 }
