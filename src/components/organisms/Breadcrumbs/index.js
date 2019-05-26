@@ -8,11 +8,11 @@ function Breadcrumbs({ links }) {
     const BreadcrumbLink = <Link href={path}>{label}</Link>;
 
     if (isLast) {
-      return <strong>{label}</strong>;
+      return <strong key={label}>{label}</strong>;
     }
 
     return (
-      <Fragment>
+      <Fragment key={label}>
         {BreadcrumbLink}
         <span>></span>
       </Fragment>
@@ -30,10 +30,12 @@ function Breadcrumbs({ links }) {
 }
 
 Breadcrumbs.propTypes = {
-  links: PropTypes.shape({
-    label: PropTypes.string.isRequired,
-    path: PropTypes.string.isRequired
-  })
+  links: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      path: PropTypes.string
+    })
+  )
 };
 
 export default Breadcrumbs;

@@ -10,12 +10,12 @@ function ResultsList({ list }) {
     return list.map(_renderListItem);
   }
 
-  function _renderListItem({ price, title, city, image, fastDelivery }) {
+  function _renderListItem({ id, price, title, city, image, freeShipping }) {
     return (
-      <Styled.Article>
+      <Styled.Article key={id}>
         <SmallImage src={image} />
         <Styled.ProductInfo>
-          <TextWithIcon icon={ShippingIcon}>{price}</TextWithIcon>
+          <TextWithIcon icon={ShippingIcon} alt="shipping icon">{price}</TextWithIcon>
           <h1>{title}</h1>
         </Styled.ProductInfo>
         <Styled.CityInfo>

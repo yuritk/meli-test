@@ -13,6 +13,7 @@ function Page({ id }) {
       return (
         <Fragment>
           <Breadcrumbs links={mockedLinks} />
+          <ProductDetail />
         </Fragment>
       );
     return (

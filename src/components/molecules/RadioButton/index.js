@@ -1,7 +1,7 @@
 import React from "react";
 import styled from 'styled-components'
 
-import { theme } from "../../lib/styled";
+import { theme } from "../../../lib/styled";
 
 const RadioWrapper = styled.div`
   display: flex;

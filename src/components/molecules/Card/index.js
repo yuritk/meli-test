@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { theme } from '../../lib/styled';
+import { theme } from '../../../lib/styled';
 
 export default styled.div`
   flex: 1;
