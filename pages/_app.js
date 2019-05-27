@@ -11,6 +11,7 @@ import SEO from "../next-seo.config";
 import configureStore from "../src/redux/configureStore";
 import Header from "../src/components/organisms/Header";
 import ThemeProvider from "../src/theme/ThemeProvider";
+import Footer from "../src/components/organisms/Footer";
 
 Router.events.on("routeChangeStart", url => NProgress.start());
 Router.events.on("routeChangeComplete", () => NProgress.done());
@@ -35,6 +36,7 @@ class MyApp extends App {
               <NextSeo config={SEO} />
               <Header {...pageProps} />
               <Component {...pageProps} />
+              <Footer />
             </Fragment>
           </ThemeProvider>
         </Provider>

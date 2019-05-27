@@ -9,4 +9,5 @@ export default {
   triple: unit*3,
   quadruple: unit*4,
   appBar: 60,
+  footer: 100,
 }
