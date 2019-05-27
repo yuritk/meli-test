@@ -1,15 +1,13 @@
 import React from "react";
 import Head from "next/head";
 
-import Wrapper from "../src/components/Wrapper";
-
 function Page(props) {
   return (
-    <Wrapper>
+    <div>
       <Head>
         <title>Search</title>
       </Head>
-    </Wrapper>
+    </div>
   );
 }
 

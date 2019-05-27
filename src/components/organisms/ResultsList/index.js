@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 
 import * as Styled from "./ResultsList.styles";
 import TextWithIcon from "../../atoms/TextWithIcon";
@@ -15,7 +15,9 @@ function ResultsList({ list }) {
       <Styled.Article key={id}>
         <SmallImage src={image} />
         <Styled.ProductInfo>
-          <TextWithIcon icon={ShippingIcon} alt="shipping icon">{price}</TextWithIcon>
+          <TextWithIcon icon={ShippingIcon} alt="shipping icon">
+            {price}
+          </TextWithIcon>
           <h1>{title}</h1>
         </Styled.ProductInfo>
         <Styled.CityInfo>

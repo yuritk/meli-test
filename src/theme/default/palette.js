@@ -2,10 +2,10 @@ export default {
   white: "#fff",
   black: "#000",
   primary: {
-    main: "#3483FA"
+    main: "#FFE600"
   },
   secondary: {
-    main: "#FFE600"
+    main: "#3483FA"
   },
   text: {
     light: "#999999",

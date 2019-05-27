@@ -6,7 +6,6 @@ export const SearchForm = styled.form`
   display: flex;
   position: relative;
   height: 40px;
-  margin: 0 ${theme('spacing.quadruple')}px;
 
   & > input {
     flex: 1;

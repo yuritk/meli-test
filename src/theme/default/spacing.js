@@ -8,5 +8,5 @@ export default {
   double: unit*2,
   triple: unit*3,
   quadruple: unit*4,
-  appBar: 70,
+  appBar: 60,
 }

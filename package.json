@@ -1,7 +1,8 @@
 {
   "name": "meli-test",
   "scripts": {
-    "dev": "nodemon server.js",
+    "dev": "next",
+    "node:dev": "nodemon server.js",
     "build": "next build",
     "start": "next start",
     "now-build": "next build"

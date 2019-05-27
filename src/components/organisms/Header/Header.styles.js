@@ -9,5 +9,5 @@ export const Nav = styled(Content).attrs({
   display: flex;
   align-items: center;
   height: ${theme('spacing.appBar')}px;
-  background-color: ${theme('palette.secondary.main')};
+  background-color: ${theme('palette.primary.main')};
 `

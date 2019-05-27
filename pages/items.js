@@ -6,14 +6,19 @@ import Content from "../src/components/atoms/Content";
 import ResultsList from "../src/components/organisms/ResultsList";
 import mockedLinks from "../src/__fixtures__/breadcrumbs.json";
 import mockedList from "../src/__fixtures__/list.json";
+import mockedProduct from "../src/__fixtures__/product.json";
+import ProductDetails from "../src/components/organisms/ProductDetails";
+import Product from "../src/Store/entities/Product";
+
+const product = new Product(mockedProduct);
 
 function Page({ id }) {
-  function _renderResultsOrProductDetail() {
+  function _renderResultsOrProductDetails() {
     if (id)
       return (
         <Fragment>
           <Breadcrumbs links={mockedLinks} />
-          <ProductDetail />
+          <ProductDetails {...product} />
         </Fragment>
       );
     return (
@@ -28,7 +33,7 @@ function Page({ id }) {
       <Head>
         <title>Results</title>
       </Head>
-      {_renderResultsOrProductDetail()}
+      {_renderResultsOrProductDetails()}
     </Content>
   );
 }
