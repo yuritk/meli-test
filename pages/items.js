@@ -4,27 +4,33 @@ import Head from "next/head";
 import Breadcrumbs from "../src/components/organisms/Breadcrumbs";
 import Content from "../src/components/atoms/Content";
 import ResultsList from "../src/components/organisms/ResultsList";
-import mockedLinks from "../src/__fixtures__/breadcrumbs.json";
 import mockedList from "../src/__fixtures__/list.json";
 import mockedProduct from "../src/__fixtures__/product.json";
 import ProductDetails from "../src/components/organisms/ProductDetails";
 import Product from "../src/Store/entities/Product";
+import Author from "../src/Store/entities/Author";
 
-const product = new Product(mockedProduct);
+const author = new Author(mockedProduct.author)
+const product = new Product(mockedProduct.item);
+const list = mockedList.items.map(product => new Product(product));
+const links = mockedList.categories.map(category => ({
+  path: category,
+  label: category
+}));
 
 function Page({ id }) {
   function _renderResultsOrProductDetails() {
     if (id)
       return (
         <Fragment>
-          <Breadcrumbs links={mockedLinks} />
+          <Breadcrumbs links={links} />
           <ProductDetails {...product} />
         </Fragment>
       );
     return (
       <Fragment>
-        <Breadcrumbs links={mockedLinks} />
-        <ResultsList list={mockedList} />
+        <Breadcrumbs links={links} />
+        <ResultsList list={list} />
       </Fragment>
     );
   }

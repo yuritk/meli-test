@@ -1,32 +1,63 @@
-[
-  {
-    "id": 1,
-    "title": "Apple Ipod Touch 5g 16gb Negro Igual A Nuevo Completo Unico!",
-    "price": "$ 1.980",
-    "city": "Capital Federal",
-    "freeShipping": true,
-    "image": "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjuha-LzrjiAhX6F7kGHWXUAiIQjRx6BAgBEAU&url=https%3A%2F%2Fwww.apple.com%2Fbr%2Fshop%2Fbuy-ipod%2Fipod-touch&psig=AOvVaw3VuQf_Da5tA4CVj459wDGc&ust=1558939964768104"
+{
+  "author": {
+    "name": "Yuri",
+    "lastname": "Kobashigawa"
   },
-  {
-    "id": 2,
-    "title": "Apple Ipod Touch 5g 16gb Negro Igual A Nuevo Completo Unico!",
-    "price": "$ 1.980",
-    "city": "Capital Federal",
-    "image": "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjuha-LzrjiAhX6F7kGHWXUAiIQjRx6BAgBEAU&url=https%3A%2F%2Fwww.apple.com%2Fbr%2Fshop%2Fbuy-ipod%2Fipod-touch&psig=AOvVaw3VuQf_Da5tA4CVj459wDGc&ust=1558939964768104"
-  },
-  {
-    "id": 3,
-    "title": "Apple Ipod Touch 5g 16gb Negro Igual A Nuevo Completo Unico!",
-    "price": "$ 1.980",
-    "city": "Capital Federal",
-    "image": "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjuha-LzrjiAhX6F7kGHWXUAiIQjRx6BAgBEAU&url=https%3A%2F%2Fwww.apple.com%2Fbr%2Fshop%2Fbuy-ipod%2Fipod-touch&psig=AOvVaw3VuQf_Da5tA4CVj459wDGc&ust=1558939964768104"
-  },
-  {
-    "id": 4,
-    "title": "Apple Ipod Touch 5g 16gb Negro Igual A Nuevo Completo Unico!",
-    "price": "$ 1.980",
-    "city": "Capital Federal",
-    "freeShipping": true,
-    "image": "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjuha-LzrjiAhX6F7kGHWXUAiIQjRx6BAgBEAU&url=https%3A%2F%2Fwww.apple.com%2Fbr%2Fshop%2Fbuy-ipod%2Fipod-touch&psig=AOvVaw3VuQf_Da5tA4CVj459wDGc&ust=1558939964768104"
-  }
-]
+  "categories": [
+    "Eletrônica, Audio y Video",
+    "IPod",
+    "Reproductores",
+    "IPod touch",
+    "32 GB"
+  ],
+  "items": [
+    {
+      "id": "1",
+      "title": "Apple Ipod Touch 5g 16gb Negro Igual A Nuevo Completo Unico!",
+      "price": {
+        "currency": "USD",
+        "amount": "1980",
+        "decimals": 0
+      },
+      "picture": "/static/picture.jpg",
+      "condition": "Nuevo",
+      "free_shipping": true
+    },
+    {
+      "id": "2",
+      "title": "Apple Ipod Touch 5g 16gb Negro Igual A Nuevo Completo Unico!",
+      "price": {
+        "currency": "USD",
+        "amount": "1980",
+        "decimals": 0
+      },
+      "picture": "/static/picture.jpg",
+      "condition": "Nuevo",
+      "free_shipping": true
+    },
+    {
+      "id": "3",
+      "title": "Apple Ipod Touch 5g 16gb Negro Igual A Nuevo Completo Unico!",
+      "price": {
+        "currency": "USD",
+        "amount": "1980",
+        "decimals": 0
+      },
+      "picture": "/static/picture.jpg",
+      "condition": "Nuevo",
+      "free_shipping": true
+    },
+    {
+      "id": "4",
+      "title": "Apple Ipod Touch 5g 16gb Negro Igual A Nuevo Completo Unico!",
+      "price": {
+        "currency": "USD",
+        "amount": "1980",
+        "decimals": 0
+      },
+      "picture": "/static/picture.jpg",
+      "condition": "Nuevo",
+      "free_shipping": true
+    }
+  ]
+}

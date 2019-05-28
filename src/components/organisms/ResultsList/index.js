@@ -3,20 +3,20 @@ import React from "react";
 import * as Styled from "./ResultsList.styles";
 import TextWithIcon from "../../atoms/TextWithIcon";
 import ShippingIcon from "../../../../static/shipping_icon.png";
-import SmallImage from "../../atoms/SmallImage";
+import SmallPicture from "../../atoms/SmallPicture";
 
 function ResultsList({ list }) {
   function _renderList() {
     return list.map(_renderListItem);
   }
 
-  function _renderListItem({ id, price, title, city, image, freeShipping }) {
+  function _renderListItem({ id, price, title, city, picture, freeShipping }) {
     return (
       <Styled.Article key={id}>
-        <SmallImage src={image} />
+        <SmallPicture src={picture} />
         <Styled.ProductInfo>
           <TextWithIcon icon={ShippingIcon} alt="shipping icon">
-            {price}
+            {price.toReadable()}
           </TextWithIcon>
           <h1>{title}</h1>
         </Styled.ProductInfo>
