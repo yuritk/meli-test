@@ -1,0 +1,11 @@
+{
+  "name": "meli-backend",
+  "version": "1.0.0",
+  "description": "Backend for Mercado Livre challenge",
+  "main": "index.js",
+  "author": "Yuri Tavares Kobashigawa",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
