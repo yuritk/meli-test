@@ -7,8 +7,8 @@ import ResultsList from "../src/components/organisms/ResultsList";
 import mockedList from "../src/__fixtures__/list.json";
 import mockedProduct from "../src/__fixtures__/product.json";
 import ProductDetails from "../src/components/organisms/ProductDetails";
-import Product from "../src/Store/entities/Product";
-import Author from "../src/Store/entities/Author";
+import Product from "../src/resources/Store/entities/Product";
+import Author from "../src/resources/Store/entities/Author";
 
 const author = new Author(mockedProduct.author)
 const product = new Product(mockedProduct.item);
