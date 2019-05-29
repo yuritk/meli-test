@@ -8,8 +8,8 @@ function setItemsCreator(payload) {
   };
 }
 
-export const searchItems = search => async dispatch => {
+export const searchItemsAction = search => async dispatch => {
   const data = await searchItemsApi(search);
 
-  setItemsCreator({ data });
+  dispatch(setItemsCreator({ data }));
 };
