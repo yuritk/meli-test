@@ -3,6 +3,9 @@ export default class Price {
     this.currency = data.currency;
     this.amount = data.amount;
     this.decimals = data.decimals;
+    // Not using toReadable() directly on e.g. ResultsList
+    // This is some kind of issue of Next sending getInitialProps to render
+    this.readable = this.toReadable();
   }
 
   toReadable() {

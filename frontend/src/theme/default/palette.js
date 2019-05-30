@@ -13,6 +13,7 @@ export default {
     dark: "#333333"
   },
   background: {
-    main: "#EEEEEE"
+    main: "#EEEEEE",
+    dark: "#DDDDDD"
   }
 };

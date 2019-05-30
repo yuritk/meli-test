@@ -2,7 +2,6 @@ const { countDecimals } = require("../utils/number");
 
 class Product {
   constructor(data) {
-    console.log(data);
     const {
       id,
       title,

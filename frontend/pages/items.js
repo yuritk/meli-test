@@ -9,6 +9,7 @@ import mockedProduct from "../src/__fixtures__/product.json";
 import ProductDetails from "../src/components/organisms/ProductDetails";
 import Product from "../src/resources/Store/entities/Product";
 import Author from "../src/resources/Store/entities/Author";
+import { searchResultsAction } from "../src/redux/actions/resultsActions";
 
 const author = new Author(mockedProduct.author)
 const product = new Product(mockedProduct.item);
@@ -18,7 +19,7 @@ const links = mockedList.categories.map(category => ({
   label: category
 }));
 
-function Page({ id }) {
+function Page({ id, search, results }) {
   function _renderResultsOrProductDetails() {
     if (id)
       return (
@@ -29,8 +30,8 @@ function Page({ id }) {
       );
     return (
       <Fragment>
-        <Breadcrumbs links={links} />
-        <ResultsList list={list} />
+        <Breadcrumbs links={results.categories} />
+        <ResultsList list={results.items} />
       </Fragment>
     );
   }
@@ -44,10 +45,17 @@ function Page({ id }) {
   );
 }
 
-Page.getInitialProps = async ({ query }) => {
-  const { id } = query;
+Page.getInitialProps = async ({ store, query }) => {
+  const { id, search } = query;
+
+  await store.dispatch(searchResultsAction(search))
+
+  const { results } = store.getState();
+
   return {
-    id
+    id,
+    search,
+    results
   };
 };
 

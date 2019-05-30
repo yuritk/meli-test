@@ -10,6 +10,6 @@ function setProductCreator(payload) {
 
 export const getProductAction = id => async dispatch => {
   const data = await getProductApi(id);
-  
-  dispatch(setProductCreator({ data }));
+
+  dispatch(setProductCreator(data));
 };

@@ -12,8 +12,13 @@ export const Section = styled.section`
 export const Article = styled.article`
   display: flex;
   color: ${theme("palette.text.dark")};
-  margin: 0 ${theme("spacing.double")}px;
-  padding: ${theme("spacing.double")}px 0;
+  padding: ${theme("spacing.double")}px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  :hover {
+    background-color: ${theme('palette.background.dark')};
+  }
 
   &:not(:last-child) {
     border-bottom: 1px solid ${theme("palette.background.main")};
@@ -32,6 +37,12 @@ export const ProductInfo = styled.section`
     font-weight: 400;
     padding: ${theme("spacing.double")}px 0;
     margin: 0;
+  }
+
+  & > span {
+    display: flex;
+    font-size: 24px;
+    padding: ${theme("spacing.double")}px 0;
   }
 
   ${TextWithIcon} {

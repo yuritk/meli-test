@@ -1,12 +1,12 @@
-import { CLEAN_ITEMS, SET_ITEMS } from "../types/itemsTypes";
+import { CLEAN_RESULTS, SET_RESULTS } from "../types/resultsTypes";
 
-const initialState = [];
+const initialState = {};
 
 export default function(state = initialState, action = {}) {
   switch (action.type) {
-    case SET_ITEMS:
-      return action.payload.items;
-    case CLEAN_ITEMS:
+    case SET_RESULTS:
+      return action.payload;
+    case CLEAN_RESULTS:
       return {
         ...initialState
       };

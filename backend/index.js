@@ -9,7 +9,7 @@ const port = process.env.PORT || 5555;
 const app = express();
 
 // app.use(bodyParser.json());
-app.use('/items', routes.items);
+app.use('/api/items', routes.items);
 
 app.listen(port, function() {
   console.log("server started on port: " + port);

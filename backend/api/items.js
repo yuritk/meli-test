@@ -8,6 +8,8 @@ router.get("/", async function(req, res) {
     if (search) {
       const data = await meliSearch(search);
       res.send(data);
+    } else {
+      throw new Error('Has not search params')
     }
   } catch (e) {
     res.status(500).send(e);
