@@ -1,5 +1,4 @@
 import React from "react";
-import { connect } from "react-redux";
 
 import * as Styled from "./ResultsList.styles";
 import TextWithIcon from "../../atoms/TextWithIcon";
@@ -8,7 +7,7 @@ import SmallPicture from "../../atoms/SmallPicture";
 import Link from "../../atoms/Link";
 import { ROUTES } from "../../../router/routes";
 
-function ResultsList({ list, test }) {
+function ResultsList({ list }) {
   function _renderList() {
     return list.map(_renderListItem);
   }
@@ -39,8 +38,4 @@ function ResultsList({ list, test }) {
   return <Styled.Section>{_renderList()}</Styled.Section>;
 }
 
-const mapStateToProps = ({ results }) => ({
-  test: results
-});
-
-export default connect(mapStateToProps)(ResultsList);
+export default ResultsList;

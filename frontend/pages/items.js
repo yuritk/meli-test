@@ -10,8 +10,9 @@ import ProductDetails from "../src/components/organisms/ProductDetails";
 import Product from "../src/resources/Store/entities/Product";
 import Author from "../src/resources/Store/entities/Author";
 import { searchResultsAction } from "../src/redux/actions/resultsActions";
+import { getProductAction } from "../src/redux/actions/productActions";
 
-const author = new Author(mockedProduct.author)
+const author = new Author(mockedProduct.author);
 const product = new Product(mockedProduct.item);
 const list = mockedList.items.map(product => new Product(product));
 const links = mockedList.categories.map(category => ({
@@ -19,13 +20,13 @@ const links = mockedList.categories.map(category => ({
   label: category
 }));
 
-function Page({ id, search, results }) {
+function Page({ id, search, results, product }) {
   function _renderResultsOrProductDetails() {
     if (id)
       return (
         <Fragment>
-          <Breadcrumbs links={links} />
-          <ProductDetails {...product} />
+          <Breadcrumbs links={product.categories} />
+          <ProductDetails {...product.item} />
         </Fragment>
       );
     return (
@@ -48,14 +49,21 @@ function Page({ id, search, results }) {
 Page.getInitialProps = async ({ store, query }) => {
   const { id, search } = query;
 
-  await store.dispatch(searchResultsAction(search))
+  if (search) {
+    await store.dispatch(searchResultsAction(search));
+    const { results } = store.getState();
+    return { search, results };
+  }
 
-  const { results } = store.getState();
+  if (id) {
+    await store.dispatch(getProductAction(id));
+    const { product } = store.getState();
+    return { id, product};
+  }
 
   return {
     id,
-    search,
-    results
+    search
   };
 };
 

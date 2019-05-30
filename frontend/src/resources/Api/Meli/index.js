@@ -1,14 +1,14 @@
 import fetch from "isomorphic-unfetch";
-import qs from 'qs';
+import qs from "qs";
 
 const URL = "http://localhost:4000/api";
 const ITEMS_URL = `${URL}/items`;
 
 export function searchProductsApi(search) {
   const queryParams = qs.stringify({
-    search,
-  })
-  const url = `${ITEMS_URL}?${queryParams}`
+    search
+  });
+  const url = `${ITEMS_URL}?${queryParams}`;
   return fetch(url)
     .then(res => res.json())
     .catch(e => console.log(e));
@@ -17,6 +17,6 @@ export function searchProductsApi(search) {
 export function getProductApi(id) {
   const url = `${ITEMS_URL}/${id}`;
   return fetch(url)
-    .then(({ data }) => data)
+    .then(res => res.json())
     .catch(e => console.log(e));
 }

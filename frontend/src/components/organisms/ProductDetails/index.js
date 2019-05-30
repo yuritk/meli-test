@@ -13,7 +13,6 @@ function ProductDetail({
   picture,
   condition,
   soldQuantity,
-  freeShipping
 }) {
   return (
     <Styled.Article as="article" col="7fr 3fr">

@@ -12,10 +12,11 @@ const match = route('/items/:id')
 
 app.prepare().then(() => {
   createServer((req, res) => {
-    const { pathname, query } = parse(req.url, true)
+    const parsedUrl = parse(req.url, true)
+    const { pathname, query } = parsedUrl
     const params = match(pathname)
     if (params === false) {
-      handle(req, res)
+      handle(req, res, parsedUrl)
       return
     }
     app.render(req, res, '/items', Object.assign(params, query))

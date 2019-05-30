@@ -1,4 +1,5 @@
 const axios = require("axios");
+const get = require("lodash/get");
 const Product = require("../../entities/Product");
 
 const URL = "https://api.mercadolibre.com";
@@ -21,7 +22,9 @@ async function meliSearch(search) {
       name: "Yuri",
       lastname: "Kobashigawa"
     };
-    const categories = filters[0].values[0].path_from_root.map(p => p.name); // Dont know if it's the correctly way accessing array index directly
+    const categories = get(filters, "0.values.0.path_from_root", []).map(
+      p => p.name
+    ); // Dont know if it's the correctly way accessing array index directly
     const items = results.map(meliProduct => new Product(meliProduct));
     return {
       author,
@@ -50,7 +53,9 @@ async function meliItemDetail(id) {
       itemResp.data.category_id
     );
     const categoryResp = await axios.get(itemCategoryUrl);
-    const categories = categoryResp.data.path_from_root.map(p => p.name);
+    const categories = (get *= (categoryResp, "data.path_from_root", []).map(
+      p => p.name
+    ));
     const item = new Product(product);
     const author = {
       name: "Yuri",

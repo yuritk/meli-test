@@ -10,7 +10,7 @@ function ProductSideInfo({ id, price, title, condition, soldQuantity }) {
         {condition} - {soldQuantity} vendidos
       </Styled.ConditionSpan>
       <Styled.Title>{title}</Styled.Title>
-      <Styled.Price>{price.toReadable()}</Styled.Price>
+      <Styled.Price>{price.readable}</Styled.Price>
 
       <Button>Comprar</Button>
     </Styled.Section>

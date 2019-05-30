@@ -8,4 +8,5 @@ export default styled.button`
   color: ${theme('palette.white')};
   background-color: ${theme('palette.secondary.main')};
   margin-right: ${theme('spacing.quadruple')}px;
+  cursor: pointer;
 `
