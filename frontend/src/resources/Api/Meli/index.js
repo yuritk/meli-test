@@ -1,7 +1,8 @@
 import fetch from "isomorphic-unfetch";
 import qs from "qs";
 
-const URL = "http://localhost:4000/api";
+console.log(process.env.MELI_API_URL)
+const URL = process.env.MELI_API_URL ? process.env.MELI_API_URL : "http://localhost:4000/api";
 const ITEMS_URL = `${URL}/items`;
 
 export function searchProductsApi(search) {

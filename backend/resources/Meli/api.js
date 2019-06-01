@@ -53,9 +53,9 @@ async function meliItemDetail(id) {
       itemResp.data.category_id
     );
     const categoryResp = await axios.get(itemCategoryUrl);
-    const categories = (get *= (categoryResp, "data.path_from_root", []).map(
+    const categories = get(categoryResp, "data.path_from_root", []).map(
       p => p.name
-    ));
+    );
     const item = new Product(product);
     const author = {
       name: "Yuri",
@@ -67,6 +67,7 @@ async function meliItemDetail(id) {
       item
     };
   } catch (e) {
+    console.log(e);
     throw new Error(e);
   }
 }
