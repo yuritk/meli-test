@@ -19,14 +19,11 @@ router.get("/", async function(req, res) {
 router.get("/:id", async function(req, res) {
   try {
     const { id } = req.params;
-    console.log(id)
     if (id) {
       const data = await meliItemDetail(id);
-      console.log(data)
       res.send(data);
     }
   } catch (e) {
-    console.log(e)
     res.status(500).send(e);
   }
 });

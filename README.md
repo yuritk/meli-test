@@ -6,15 +6,15 @@ A description of what is expected and what I marked as I could possibly do.
 
 ### Requisites
 
-- [ ] Search Box
+- [x] Search Box
 
-- [ ] Results List
+- [x] Results List
 
-- [ ] Product Detail
+- [x] Product Detail
 
-- [ ] Search endpoint
+- [x] Search endpoint
 
-- [ ] Product Detail endpoint
+- [x] Product Detail endpoint
 
 ### Personal Bonus Tasks
 
@@ -26,9 +26,9 @@ A description of what is expected and what I marked as I could possibly do.
 
 - [x] Server side rendering; -> NextJS
 
-- [ ] Apply ARc architecture
+- [x] Apply ARc architecture
 
-- [ ] Do something nice!
+- [x] Do something nice!
 
 ## Stack
 

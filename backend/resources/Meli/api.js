@@ -67,7 +67,6 @@ async function meliItemDetail(id) {
       item
     };
   } catch (e) {
-    console.log(e);
     throw new Error(e);
   }
 }
