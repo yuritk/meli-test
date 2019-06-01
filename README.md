@@ -47,22 +47,8 @@ It will be used:
 - [Storybook](https://github.com/storybooks/storybook): Its a components exposed book
 
 
-## Available Scripts
+## How to start
 
-In the project directory, you can run:
+- Run yarn node:dev on /frontend -> This will run the frontend project on localhost:3000
 
-### `yarn dev`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+- Run yarn dev on /backend -> This will run the backend project on localhost:4000
