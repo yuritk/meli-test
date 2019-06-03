@@ -5,7 +5,10 @@
     "node:dev": "nodemon server.js",
     "build": "next build",
     "start": "next start",
-    "now-build": "next build"
+    "now-build": "next build",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "lint-staged": {
     "*.js": [
@@ -47,6 +50,11 @@
   },
   "devDependencies": {
     "babel-plugin-inline-react-svg": "^1.1.0",
-    "babel-plugin-styled-components": "^1.10.0"
+    "babel-plugin-styled-components": "^1.10.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.13.2",
+    "jest": "^24.8.0",
+    "jest-enzyme": "^7.0.2",
+    "react-test-renderer": "^16.8.6"
   }
 }

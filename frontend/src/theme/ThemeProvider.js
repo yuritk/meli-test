@@ -3,9 +3,9 @@ import { ThemeProvider } from "styled-components";
 
 import defaultTheme from "./default";
 
-export default function({ children }) {
+export default function({ children, theme }) {
   return (
-    <ThemeProvider theme={defaultTheme}>
+    <ThemeProvider theme={theme || defaultTheme}>
       {children}
     </ThemeProvider>
   );

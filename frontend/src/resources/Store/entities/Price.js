@@ -15,15 +15,15 @@ export default class Price {
       decimals,
     } = this;
 
-    const value = Number(amount).toLocaleString('pt-BR')
-    return `$ ${value}`;
+    // const value = Number(amount).toLocaleString('pt-BR')
+    // return `$ ${value}`;
 
     // It comes with US$ before the amount, e.g. US$ 1.900
     // Tried others locales like es-ar and en-us
-    // return Number(amount).toLocaleString("pt-BR", {
-    //   style: "currency",
-    //   currency: currency,
-    //   minimumFractionDigits: decimals
-    // });
+    return Number(amount).toLocaleString("pt-BR", {
+      style: "currency",
+      currency,
+      minimumFractionDigits: decimals
+    });
   }
 }

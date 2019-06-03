@@ -10,7 +10,7 @@ const A = styled.a`
 
 function Link({ children, href, ...props }) {
   return (
-    <NextLink href={href}>
+    <NextLink href={href} prefetch>
       <A href={href} {...props.style}>
         {children}
       </A>
